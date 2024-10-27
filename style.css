@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #50b3a2;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #2980b9 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #e9ff70;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase */
+#main-page {
+    background: url('estate.jpg') no-repeat center center/cover;
+    color: #000000;
+    height: 400px;
+    text-align: center;
+}
+
+#main-page .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main-page h1 {
+    font-size: 55px;
+    margin-top: 0;
+}
+
+#main-page p {
+    font-size: 20px;
+}
+
+/* Sections */
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Forms */
+form label {
+    display: block;
+    margin: 5px 0 5px 0;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form small {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: #888888;
+}
+
+/* Footer */
+footer {
+    background: #50b3a2;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header nav {
+        float: none;
+    }
+    header nav ul {
+        text-align: center;
+    }
+    header nav li {
+        float: none;
+        display: block;
+        padding: 10px;
+    }
+}

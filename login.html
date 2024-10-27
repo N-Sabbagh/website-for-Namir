@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The International Way Neighbourhood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>The International Way Neighbourhood</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./latest-news.html">Latest News</a></li>
+                    <li><a href="./recommendations.html">Recommendations</a></li>
+                    <li><a href="./download.html">Download</a></li>
+                    <li><a href="./issues-reporting.html">Issues & Reporting</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./site-map.html">Site Map</a></li>
+                    <!-- Phase 2 Features -->
+                    <li><a href="./login.html" id="login-link">Login/Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Phase 2 Features -->
+    <!-- Login/Register Section -->
+    <section id="login">
+        <div class="container">
+            <h2>Login/Register</h2>
+            <div id="login-form">
+                <form onsubmit="return handleLogin(event);">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="login-email" required>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Not registered? <a href="#register" onclick="showRegisterForm();">Click here to register.</a></p>
+            </div>
+            <div id="register-form" style="display: none;">
+                <form onsubmit="return handleRegister(event);">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="register-email" required>
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" name="register-password" required pattern="(?=.*\d)(?=.*[\W_]).{8,}">
+                    <small>Password must be at least 8 characters, including a number and a special character.</small>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    <label for="mobile-number">Mobile Number (Optional):</label>
+                    <input type="tel" id="mobile-number" name="mobile-number">
+                    <label for="status">Are you a Renter, Leaseholder/Owner:</label>
+                    <select id="status" name="status" required>
+                        <option value="R">Renter</option>
+                        <option value="L">Leaseholder</option>
+                        <option value="O">Owner</option>
+                    </select>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#login" onclick="showLoginForm();">Click here to login.</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 The International Way Neighbourhood Committee</p>
+        </div>
+    </footer>
+
+    <!-- Link to the JS file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -50,7 +50,7 @@ function showLoginForm() {
 document.addEventListener('DOMContentLoaded', function() {
     var downloadSection = document.getElementById('download');
     // Placeholder for user authentication check
-    var isLoggedIn = false; // Replace with actual authentication check
+    var isLoggedIn = true; // Replace with actual authentication check
 
     if (!isLoggedIn) {
         downloadSection.innerHTML = `

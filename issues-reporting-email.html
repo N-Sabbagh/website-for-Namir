@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The International Way Neighbourhood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+           // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "vyz9_nIiximpUdyPF",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_h2t04mh', 'template_z04a0yp', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        document.getElemnetById('contact-form').reset();
+                        alert ('Email sent successfully');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                     //   document.getElemnetById('contact-form').reset();
+                        alert ('Failed - Email was not sent');
+                    });
+            });
+        }
+        </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>International Way – Sunbury-on-Thames</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./latest-news.html">Latest News</a></li>
+                    <li><a href="./recommendations.html">Recommendations</a></li>
+                    <li><a href="./download.html">Download</a></li>
+                    <li><a href="./issues-reporting.html">Reporting Issues</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./site-map.html">Site Map</a></li>
+                    <!-- Phase 2 Features 
+                    <li><a href="./login.html" id="login-link">Login/Register</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Issues & Reporting Section -->
+    <section id="issues-reporting">
+        <center><h2>Issues & Reporting</h2></section></center>
+        <div style="padding-left:100px; padding-right:250px">
+                <form id="contact-form">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="name" required>
+
+                    <label for="emailaddress">Email Address (optional):</label>
+                    <input type="text" id="address" name="address">
+
+                    <label for="status">Are you a Renter, Leaseholder/Owner:</label>
+                    <select id="status" name="status">
+                        <option value=""></option>
+                        <option value="Renter">Renter</option>
+                        <option value="Leaseholder">Leaseholder</option>
+                        <option value="Owner">House Owner</option>
+                    </select>
+
+                    <label for="message">Issue to report:</label>
+                    <textarea name="message" rows="5" cols=150" placeholder="Brief decription of the issue to report" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+        </div>
+    
+    </section>
+    <section>
+        <center>
+            Click <b><a href=./index.html>here</a></b> to go back to the Home page>
+        </center>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 International Way (Sunbury) Management Co. Ltd.</p>
+        </div>
+    </footer>
+
+    <!-- Link to the JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
